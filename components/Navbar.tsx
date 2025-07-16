@@ -21,6 +21,8 @@ export default function Navbar() {
     { name: 'How It Works', href: '#how-it-works' },
     { name: 'Pricing', href: '#pricing' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: 'Terms of Service', href: '/terms-of-service' },
   ]
 
   return (
