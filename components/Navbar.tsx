@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Menu, X, CreditCard } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 import { cn } from '../lib/utils'
 
 export default function Navbar() {
@@ -38,12 +39,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
-              <CreditCard className="h-6 w-6 text-white" />
+            <div>
+              <Image src="/logo.svg" alt="Checkout Flow Logo" width={50} height={50} />
             </div>
-            <span className="text-xl font-bold gradient-text-primary">
-              Checkout Flow
-            </span>
+            {/* Logo text from text.png */}
+            <div className="h-6 w-auto">
+              <Image src="/text.png" alt="Checkout Flow" width={120} height={24} />
+            </div>
           </div>
 
           {/* Desktop Navigation */}

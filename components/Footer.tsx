@@ -1,6 +1,7 @@
 'use client'
 
-import { CreditCard, Mail, Twitter, Github } from 'lucide-react'
+import { Mail, Twitter, Github } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Footer() {
   const footerSections = [
@@ -52,9 +53,12 @@ export default function Footer() {
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-6">
                 <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
-                  <CreditCard className="h-6 w-6 text-white" />
+                  <Image src="/logo.svg" alt="Checkout Flow Logo" width={24} height={24} />
                 </div>
-                <span className="text-xl font-bold">Checkout Flow</span>
+                {/* Logo text from text.png */}
+                <div className="h-6 w-auto">
+                  <Image src="/text.png" alt="Checkout Flow" width={120} height={24} />
+                </div>
               </div>
               <p className="text-gray-400 mb-6 max-w-md">
                 Smart payment method customization for Shopify stores. Hide, sort, and rename checkout payment options to boost conversions and improve customer experience.
